@@ -12,8 +12,22 @@
 #include <fstream>
 #include <iomanip>
 
-int main() {
+using namespace std;
 
+struct dndCharacter{
+    string dndClass[12];
+    int hitPoints;
+    int strength;
+    int dexterity;
+    int constitution;
+    int intelligence;
+    int wisdom;
+    int charisma;
+    string equipment;
+};
+
+int main() {
+    
 
 
     return 0;
