@@ -32,19 +32,10 @@ int main() {
 
     dndCharacter sheet1;
     dndCharacter dnd_Class[12] = {
-       {"Barbarian"},
-       {"Bard"},
-       {"Cleric"},
-       {"Druid"},
-       {"Fighter"},
-       {"Monk"},
-       {"Paladin"},
-       {"Ranger"},
-       {"Rogue"},
-       {"Sorcerer"},
-       {"Warlock"},
-       {"Wizard"}
-        };
+       {"Barbarian"}, {"Bard"}, {"Cleric"}, {"Druid"},
+       {"Fighter"}, {"Monk"}, {"Paladin"}, {"Ranger"},
+       {"Rogue"}, {"Sorcerer"}, {"Warlock"}, {"Wizard"}
+    };
      
 
         for (int i = 0; i < 12; ++i) {
@@ -60,6 +51,7 @@ int main() {
                 return 1;
         }
 
+        cout << "Enter character name: ";
         getline(cin, sheet1.characterName);
 
         if (outputfile.is_open()) {
