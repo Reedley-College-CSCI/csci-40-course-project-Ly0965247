@@ -7,6 +7,7 @@
  * character and keep track of notes for quests, equipment, level, and stats.
 */
 
+
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -27,7 +28,27 @@ struct dndCharacter{
 };
 
 int main() {
-    
+
+    dndCharacter dnd_Class[12] = {
+       {"Barbarian"},
+       {"Bard"},
+       {"Cleric"},
+       {"Druid"},
+       {"Fighter"},
+       {"Monk"},
+       {"Paladin"},
+       {"Ranger"},
+       {"Rogue"},
+       {"Sorcerer"},
+       {"Warlock"},
+       {"Wizard"}
+        };
+            
+
+        for (int i = 0; i < 12; ++i) {
+            cout << dnd_Class[i].dndclass
+            << " ";
+        }
 
 
     return 0;
