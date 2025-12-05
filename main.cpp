@@ -53,7 +53,7 @@ int main() {
         }
         cout << endl;
 
-        ofstream outputfile("characterSheet");
+        ofstream outputfile("characterSheet.txt");
 
         if (!outputfile.is_open()) {
             cout << "Error opening character sheet.";
