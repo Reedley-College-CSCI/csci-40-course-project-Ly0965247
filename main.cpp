@@ -16,7 +16,8 @@
 using namespace std;
 
 struct dndCharacter{
-    string dndClass[12];
+    string dndClassName;
+    string characterName;
     int hitPoints;
     int strength;
     int dexterity;
@@ -46,7 +47,7 @@ int main() {
             
 
         for (int i = 0; i < 12; ++i) {
-            cout << dnd_Class[i].dndclass
+            cout << dnd_Class[i].dndClassName
             << " ";
         }
 
