@@ -30,6 +30,7 @@ struct dndCharacter{
 
 int main() {
 
+    dndCharacter sheet1;
     dndCharacter dnd_Class[12] = {
        {"Barbarian"},
        {"Bard"},
@@ -44,13 +45,32 @@ int main() {
        {"Warlock"},
        {"Wizard"}
         };
-            
+     
 
         for (int i = 0; i < 12; ++i) {
             cout << dnd_Class[i].dndClassName
             << " ";
         }
+        cout << endl;
 
+        ofstream outputfile("characterSheet");
+
+        if (!outputfile.is_open()) {
+            cout << "Error opening character sheet.";
+                return 1;
+        }
+
+        getline(cin, sheet1.characterName);
+
+        if (outputfile.is_open()) {
+            outputfile << "Character Name: " << sheet1.characterName << endl;
+
+            outputfile.close();
+            cout << "Character successfully saved!";
+        }
+        else {
+            cout << "Unable to save your character." << endl;
+        }
 
     return 0;
 }
